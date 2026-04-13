@@ -361,3 +361,92 @@ main {
     z-index: 200;
 }
 
+/* ==========================
+   SECCIÓN: FLEXBOX
+   ========================== */
+
+#flexbox {
+    border-top: 2px solid #333;
+    padding: 40px 20px;
+    margin-top: 200px;
+}
+
+#flexbox h2 {
+    background-color: rgb(106, 192, 231);
+    text-align: center;
+}
+
+/* Flex Container */
+.flex-container {
+    display: flex; /* activa Flex */
+
+    /* A. Flex Container */
+    flex-direction: row;        /* row | column (Direccion de los elementos) */
+    flex-wrap: wrap;            /* wrap para permitir multiples filas*/
+    flex-flow: row wrap;        /* combinación */
+
+    justify-content: space-between; /* para alineacion horizontal */
+    align-items: center; /* para alineacion vertical */
+    align-content: space-around; /* para el espacio entre filas */
+
+    gap: 15px;
+
+    background-color: blue;
+    padding: 20px;
+    min-height: 300px;
+}
+
+/* B. Flex Items */
+.flex-item {
+    background-color: steelblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    min-width: 120px;
+}
+
+/* Propiedades específicas */
+.item-1 {
+    order: 2;
+}
+
+.item-2 {
+    order: 1;
+}
+
+.item-3 {
+    flex-grow: 2;
+}
+
+.item-4 {
+    flex-shrink: 0;
+}
+
+.item-5 {
+    flex-basis: 200px;
+}
+
+/* Uso de la propiedad flex */
+.item-3 {
+    flex: 2 1 150px; /*flex-grow flex-shrink flex-basis*/
+}
+
+/* align-self individual */
+.item-4 {
+    align-self: flex-end;
+}
+
+/* ==========================
+   FLEX RESPONSIVE
+   ========================== */
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flex-item {
+        width: 100%;
+    }
+}
