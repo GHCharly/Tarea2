@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <!-- Referencia la hoja de estilos de css -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
     <header id="encabezado">
         <h1 class="titulo">Tarea 2</h1>
@@ -35,27 +37,89 @@
             </div>
             <span class="ejemplo-inline">Elemento inline</span>
         </section>
-        <section id="display">
 
-        </section>
         <section id="position">
+            <h2>Propiedad Position</h2>
+
+            <div class="pos-static">Static (default)</div>
+
+            <div class="pos-relative">
+                Relative (Elemento Padre)
+                <div class="pos-absolute">Absolute (Elemento Hijo)</div>
+            </div>
+
+            <div class="pos-fixed">Fixed</div>
+        </section>
+
+        <section id="float-clear">
+
+            <h2>Float y Clear</h2>
+
+            <div class="float-left">Float Left</div>
+            <div class="float-right">Float Right</div>
+
+            <div class="clear-example">Este elemento usa clear: both</div>
 
         </section>
-        <section id="float-clear">
-            
+
+        <section id="display">
+            <h2>Propiedad Display</h2>
+
+            <div class="display-block">Block</div>
+            <span class="display-inline">Inline</span>
+            <div class="display-inline-block">Inline-block</div>
+            <div class="display-none">No visible</div>
         </section>
+
         <section id="overflow">
-            
+            <h2>Propiedad Overflow</h2>
+            <p>
+                En estos ejemplos se muestra cómo la propiedad <strong>overflow</strong>
+                controla el desbordamiento de una imagen dentro de un contenedor.
+            </p>
+
+            <div class="overflow-container overflow-visible">
+                <img src="assets/img/overflow.jpeg" alt="Ejemplo overflow visible">
+                <p>overflow: visible</p>
+            </div>
+
+            <div class="overflow-container overflow-hidden">
+                <img src="assets/img/overflow.jpeg" alt="Ejemplo overflow hidden">
+                <p>overflow: hidden</p>
+            </div>
+
+            <div class="overflow-container overflow-scroll">
+                <img src="assets/img/overflow.jpeg" alt="Ejemplo overflow scroll">
+                <p>overflow: scroll</p>
+            </div>
+
+            <div class="overflow-container overflow-auto">
+                <img src="assets/img/overflow.jpeg" alt="Ejemplo overflow auto">
+                <p>overflow: auto</p>
+            </div>
         </section>
+
         <section id="visibility">
-            
+
+            <h2>Visibility</h2>
+
+            <div class="visible-box">Visible</div>
+            <div class="hidden-box">Hidden (ocupa espacio)</div>
+
         </section>
+
         <section id="z-index">
-            
+            <h2>Z-Index</h2>
+            <p>El índice z de menor valor tiene menos prioridad ante el índice z de mayor valor</p>
+
+            <div class="z-box z1">Z-Index 1</div>
+            <div class="z-box z2">Z-Index 2</div>
         </section>
+        
         <section id="flexbox">
-            
+
         </section>
     </main>
 </body>
+
 </html>
