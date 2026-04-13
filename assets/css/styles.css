@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family:'Open Sans', 'Roboto', 'Poppins', sans-serif;
+    font-family: 'Open Sans', 'Roboto', 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
     min-height: 100vh;
@@ -73,14 +73,14 @@ body {
 /* Sección Main */
 main {
     clear: both;
-    padding-top: 100px; 
+    padding-top: 100px;
 }
 
 
 /* ==========================
    SECCIÓN: BOX MODEL
    ========================== */
-main #box-model {
+#box-model {
     border: 1px solid #333;
     padding: 20px;
     margin-bottom: 40px;
@@ -89,7 +89,8 @@ main #box-model {
 
 /* DIV covertido en inline-block */
 #box-model .ejemplo-box-model {
-    display: inline-block; /*Cambio de comportamiento*/
+    display: inline-block;
+    /*Cambio de comportamiento*/
     width: 300px;
     padding: 20px;
     border: 5px solid #333;
@@ -104,9 +105,259 @@ main #box-model {
 
 /* SPAN covertido en bloque */
 #box-model .ejemplo-inline {
-    display: block; /*Cambio de comportamiento*/
+    display: block;
+    /*Cambio de comportamiento*/
     padding: 10px;
     border: 2px dashed red;
     margin: 20px 0;
     background-color: #ffe0e0;
 }
+
+/* ==========================
+   SECCIÓN: Position
+   ========================== */
+#position {
+    padding: 10px;
+    margin: 10px;
+}
+
+#position h2 {
+    text-align: center;
+    background-color: aqua;
+}
+
+/*Valor static por default*/
+.pos-static {
+    position: static;
+    background: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+
+/*Valor relative en un padre para que tenga hijos absolute*/
+.pos-relative {
+    position: relative;
+    background: #b3e5fc;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/*Valor absolute depende de un padre relative*/
+.pos-absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffccbc;
+    padding: 5px;
+}
+
+/*Valor fixed para los hijos del absolute*/
+.pos-fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #c8e6c9;
+    padding: 8px;
+}
+
+/* ==========================
+   SECCIÓN: Float y Clear
+   ========================== */
+#float-clear {
+    padding: 10px;
+    margin: 10px;
+}
+
+#float-clear h2 {
+    text-align: center;
+    background-color: palegreen;
+}
+
+/*Valor left*/
+.float-left {
+    float: left;
+    width: 45%;
+    background: #ffcdd2;
+    padding: 20px;
+}
+
+/*Valor right*/
+.float-right {
+    float: right;
+    width: 45%;
+    background: #bbdefb;
+    padding: 20px;
+}
+
+/*Propiedad Clear con valor both para limpiar ambos float*/
+.clear-example {
+    clear: both;
+    background: #dcedc8;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ==========================
+   SECCIÓN: Display
+   ========================== */
+#display {
+    padding: 10px;
+    margin: 10px;
+}
+
+#display h2 {
+    text-align: center;
+    background-color: plum;
+}
+
+/* Valor block */
+.display-block {
+    display: block;
+    background: #e1bee7;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Valor inline */
+.display-inline {
+    display: inline;
+    background: #d1c4e9;
+}
+
+/* Valor inline-block */
+.display-inline-block {
+    display: inline-block;
+    width: 120px;
+    height: 60px;
+    background: #b3e5fc;
+}
+
+/* Valor none */
+.display-none {
+    display: none;
+}
+
+/* ==========================
+   SECCIÓN: Overflow
+   ========================== */
+#overflow {
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+#overflow h2 {
+    background-color: goldenrod;
+    margin-bottom: 5px;
+}
+
+
+#overflow>p {
+    margin-bottom: 15px;
+    background-color: gold;
+}
+
+.overflow-container {
+    width: 250px;
+    height: 150px;
+    border: 2px solid #333;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.overflow-container img {
+    width: 400px;
+    /* Imagen más grande que el contenedor */
+    height: auto;
+}
+
+/* Valores de overflow */
+.overflow-visible {
+    overflow: visible;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.overflow-container p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+}
+
+/* ==========================
+   SECCIÓN: Visible
+   ========================== */
+#visibility {
+    padding: 10px;
+    margin: 10px;
+}
+
+#visibility h2 {
+    text-align: center;
+    background-color: rgb(19, 238, 118);
+}
+
+.visible-box {
+    visibility: visible;
+    background: #c8e6c9;
+    padding: 10px;
+    text-align: center;
+}
+
+.hidden-box {
+    visibility: hidden;
+    background: #ffcdd2;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+/* ==========================
+   SECCIÓN: Z-index (el indice z de menor valor tiene menos prioridad ante el indice z de mayor valor)
+   ========================== */
+#z-index {
+    position: relative;
+    text-align: center;
+}
+
+#z-index h2 {
+    background-color: purple;
+    color: white;
+}
+
+.z-box {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.z1 {
+    background: rgba(255, 0, 0, 0.5);
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.z2 {
+    background: rgba(0, 0, 255, 0.5);
+    top: 60px;
+    left: 60px;
+    z-index: 200;
+}
+
